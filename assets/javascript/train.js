@@ -79,8 +79,8 @@ var config = {
       //convert minutes back to hours and minutes
       var arrivalTime = moment().add(minutesAway,'minutes').format('HH:mm');
 
-      userEntry.append('<td>' + arrivalTime + '<td>');
-      userEntry.append('<td>' + minutesAway + '<td>');
+      tableRow.append('<td>' + arrivalTime + '<td>');
+      tableRow.append('<td>' + minutesAway + '<td>');
 
     });
 
