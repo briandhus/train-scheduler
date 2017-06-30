@@ -49,6 +49,7 @@ var config = {
       var entryName = snapshot.val().name;
       var entryDestination = snapshot.val().destination;
       var entryRate = Number(snapshot.val().rate);
+      var firstTrain = snapshot.val().firstTrain;
 
       var tableRow = $('<tr>').append($('<td>').text(entryName)).append($('<td>').text(entryDestination)).append($('<td>').text(entryRate)).append($('<td>').text(firstTrain));
 
@@ -76,10 +77,7 @@ var config = {
       var numberOfTrains = difference % entryRate;
       //
       var minutesAway = entryRate - numberOfTrains;
-      //convert minutes back to hours and minutes
-      var arrivalTime = moment().add(minutesAway,'minutes').format('HH:mm');
-
-      tableRow.append('<td>' + arrivalTime + '<td>');
+      
       tableRow.append('<td>' + minutesAway + '<td>');
 
     });
